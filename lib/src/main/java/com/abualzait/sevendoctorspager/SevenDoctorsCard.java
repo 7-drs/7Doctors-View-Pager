@@ -2,7 +2,7 @@ package com.abualzait.sevendoctorspager;
 
 import android.graphics.Color;
 
-import com.abualzait.sevendoctorspager.views.GlazyImageView;
+import com.abualzait.sevendoctorspager.views.SevenDoctorsImageView;
 
 import java.io.Serializable;
 
@@ -27,7 +27,7 @@ public class SevenDoctorsCard implements Serializable{
     private int mTintColor;
     private int mTintAlpha;
 
-    private GlazyImageView.ImageCutType mImageCutType;
+    private SevenDoctorsImageView.ImageCutType mImageCutType;
     private int mImageCutCount;
     private int mImageCutHeightDP;
 
@@ -35,27 +35,27 @@ public class SevenDoctorsCard implements Serializable{
 
     public SevenDoctorsCard() {
 
-        mImageRes = GlazyImageView.DEF_IMAGE_RES;
+        mImageRes = SevenDoctorsImageView.DEF_IMAGE_RES;
         mDescription = "";
 
-        mTitle = GlazyImageView.DEF_TITLE_TEXT;
-        mTitleColor = GlazyImageView.DEF_TITLE_TEXT_COLOR;
-        mTitleSizeDP = GlazyImageView.DEF_TITLE_TEXT_SIZE_DP;
+        mTitle = SevenDoctorsImageView.DEF_TITLE_TEXT;
+        mTitleColor = SevenDoctorsImageView.DEF_TITLE_TEXT_COLOR;
+        mTitleSizeDP = SevenDoctorsImageView.DEF_TITLE_TEXT_SIZE_DP;
 
-        mSubTitle = GlazyImageView.DEF_SUB_TITLE_TEXT;
-        mSubTitleColor = GlazyImageView.DEF_SUB_TITLE_TEXT_COLOR;
-        mSubTitleSizeDP = GlazyImageView.DEF_SUB_TITLE_TEXT_SIZE_DP;
+        mSubTitle = SevenDoctorsImageView.DEF_SUB_TITLE_TEXT;
+        mSubTitleColor = SevenDoctorsImageView.DEF_SUB_TITLE_TEXT_COLOR;
+        mSubTitleSizeDP = SevenDoctorsImageView.DEF_SUB_TITLE_TEXT_SIZE_DP;
 
-        mTextMarginDP = GlazyImageView.DEF_TEXT_MARGIN_DP;
-        mLineSpacingDP = GlazyImageView.DEF_LINE_SPACING_DP;
+        mTextMarginDP = SevenDoctorsImageView.DEF_TEXT_MARGIN_DP;
+        mLineSpacingDP = SevenDoctorsImageView.DEF_LINE_SPACING_DP;
 
-        mAutoTint = GlazyImageView.DEF_AUTO_TINT_MODE;
-        mTintColor = GlazyImageView.DEF_TINT_COLOR;
-        mTintAlpha = GlazyImageView.DEF_TINT_ALPHA;
+        mAutoTint = SevenDoctorsImageView.DEF_AUTO_TINT_MODE;
+        mTintColor = SevenDoctorsImageView.DEF_TINT_COLOR;
+        mTintAlpha = SevenDoctorsImageView.DEF_TINT_ALPHA;
 
-        mImageCutType = GlazyImageView.DEF_IMAGE_CUT_TYPE;
-        mImageCutCount = GlazyImageView.DEF_CUT_COUNT;
-        mImageCutHeightDP = GlazyImageView.DEF_CUT_HEIGHT;
+        mImageCutType = SevenDoctorsImageView.DEF_IMAGE_CUT_TYPE;
+        mImageCutCount = SevenDoctorsImageView.DEF_CUT_COUNT;
+        mImageCutHeightDP = SevenDoctorsImageView.DEF_CUT_HEIGHT;
 
         mBackgroundColor = Color.parseColor("#FFF1F1F1");
     }
@@ -138,7 +138,7 @@ public class SevenDoctorsCard implements Serializable{
         return this;
     }
 
-    public SevenDoctorsCard withImageCutType(GlazyImageView.ImageCutType cutType) {
+    public SevenDoctorsCard withImageCutType(SevenDoctorsImageView.ImageCutType cutType) {
         mImageCutType = cutType;
         return this;
     }
@@ -214,7 +214,7 @@ public class SevenDoctorsCard implements Serializable{
         return mTintAlpha;
     }
 
-    public GlazyImageView.ImageCutType getImageCutType() {
+    public SevenDoctorsImageView.ImageCutType getImageCutType() {
         return mImageCutType;
     }
 

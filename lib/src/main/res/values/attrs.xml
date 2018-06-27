@@ -27,7 +27,7 @@
     <attr name="openFactor" format="float"/>
 
 
-    <declare-styleable name="GlazyImageView">
+    <declare-styleable name="SevenDoctorsImageView">
 
         <attr name="src" />
 

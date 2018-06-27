@@ -12,32 +12,31 @@ compile 'com.android.support:palette-v7:25.2.0'
 
 ### Usage
     Refer the implementation in the sample app.
-```xml
-    <com.kannan.glazy.pager.GlazyViewPager
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-    </com.kannan.glazy.pager.GlazyViewPager>
+To get a Git project into your build:
+
+Step 1. Add the JitPack repository to your build file
+```	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
 ```
+### gradle
+Add it in your root build.gradle at the end of repositories:
 
-## GlazyImageView
-You can even use the GlazyImageView alone.
-
-```xml
-    <com.kannan.glazy.views.GlazyImageView
-        android:id="@+id/glazy_image_view"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        glazy:cutType="wave"
-        glazy:cutHeight="50dp"
-        glazy:cutCount="3"
-        glazy:autoTint="false"
-        glazy:tintColor="#ff000000"
-        glazy:tintAlpha="125"
-        glazy:titleTextSize="25dp"
-        glazy:subTitleTextSize="18dp"
-        glazy:textMargin="25dp"
-        glazy:lineSpacing="10dp"
-    />
+```	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+Step 2. Add the dependency
+```
+	dependencies {
+	        implementation 'com.github.7-drs:7Doctors-View-Pager:-SNAPSHOT'
+	}
 ```
 
 License

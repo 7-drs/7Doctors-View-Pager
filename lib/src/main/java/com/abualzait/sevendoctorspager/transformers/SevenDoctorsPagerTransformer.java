@@ -5,7 +5,7 @@ import android.view.View;
 
 import com.kannan.glazy.R;
 import com.abualzait.sevendoctorspager.pager.SevenDoctorsViewPager;
-import com.abualzait.sevendoctorspager.views.GlazyImageView;
+import com.abualzait.sevendoctorspager.views.SevenDoctorsImageView;
 
 public class SevenDoctorsPagerTransformer implements ViewPager.PageTransformer {
 
@@ -24,7 +24,7 @@ public class SevenDoctorsPagerTransformer implements ViewPager.PageTransformer {
         if(Math.abs(position) <= 1.1f) {
 
             float factor = 1.0f - Math.abs(position);
-            ((GlazyImageView) page.findViewById(R.id.glazy_image_view)).update(factor);
+            ((SevenDoctorsImageView) page.findViewById(R.id.glazy_image_view)).update(factor);
             (page.findViewById(R.id.description_text)).setAlpha(factor);
 
         }

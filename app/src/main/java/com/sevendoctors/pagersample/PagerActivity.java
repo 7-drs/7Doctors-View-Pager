@@ -9,7 +9,7 @@ import android.view.WindowManager;
 import com.abualzait.sevendoctorspager.*;
 import com.abualzait.sevendoctorspager.pager.*;
 import com.abualzait.sevendoctorspager.transformers.SevenDoctorsPagerTransformer;
-import com.abualzait.sevendoctorspager.views.GlazyImageView.ImageCutType;
+import com.abualzait.sevendoctorspager.views.SevenDoctorsImageView.ImageCutType;
 
 public class PagerActivity extends AppCompatActivity {
 

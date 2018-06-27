@@ -27,9 +27,9 @@ import com.abualzait.sevendoctorspager.Utils;
 import java.util.ArrayList;
 
 
-public class GlazyImageView extends View {
+public class SevenDoctorsImageView extends View {
 
-    private String TAG = GlazyImageView.class.getSimpleName();
+    private String TAG = SevenDoctorsImageView.class.getSimpleName();
 
     public static final int           DEF_IMAGE_RES               = -1;
     public static final String        DEF_TITLE_TEXT              = "";
@@ -114,17 +114,17 @@ public class GlazyImageView extends View {
         }
     }
 
-    public GlazyImageView(Context context) {
+    public SevenDoctorsImageView(Context context) {
         super(context);
         init(context, null);
     }
 
-    public GlazyImageView(Context context, AttributeSet attrs) {
+    public SevenDoctorsImageView(Context context, AttributeSet attrs) {
         super(context, attrs);
         init(context, attrs);
     }
 
-    public GlazyImageView(Context context, AttributeSet attrs, int defStyleAttr) {
+    public SevenDoctorsImageView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
         init(context, attrs);
     }

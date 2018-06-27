@@ -4,33 +4,31 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.view.LayoutInflater;
-import android.view.View;
-import android.view.ViewGroup;
+import android.view.*;
 import android.widget.TextView;
 
-import com.abualzait.sevendoctorspager.SevenDoctorsCard;
-import com.kannan.glazy.R;
-import com.abualzait.sevendoctorspager.Utils;
-import com.abualzait.sevendoctorspager.views.GlazyImageView;
+import com.abualzait.sevendoctorspager.*;
+import com.abualzait.sevendoctorspager.views.SevenDoctorsImageView;
 
-public class GlazyCardFragment extends Fragment {
+import java.util.Objects;
+
+public class SevenDoctorsCardFragment extends Fragment {
 
     private Context mContext;
     private SevenDoctorsCard card;
 
-    public static GlazyCardFragment newInstance(SevenDoctorsCard card) {
-        GlazyCardFragment glazyCardFragment = new GlazyCardFragment();
+    public static SevenDoctorsCardFragment newInstance(SevenDoctorsCard card) {
+        SevenDoctorsCardFragment sevenDoctorsCardFragment = new SevenDoctorsCardFragment();
         Bundle args = new Bundle();
-        args.putSerializable("glazy_card", card);
-        glazyCardFragment.setArguments(args);
+        args.putSerializable("sevendoctors", card);
+        sevenDoctorsCardFragment.setArguments(args);
 
-        return glazyCardFragment;
+        return sevenDoctorsCardFragment;
     }
     @Override
     public void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        card = (SevenDoctorsCard) getArguments().getSerializable("glazy_card");
+        card = (SevenDoctorsCard) Objects.requireNonNull(getArguments()).getSerializable("sevendoctors");
         mContext = getContext();
     }
 
@@ -42,11 +40,11 @@ public class GlazyCardFragment extends Fragment {
         View v =  inflater.inflate(R.layout.layout_page, container, false);
         v.setBackgroundColor(card.getBackgroundColor());
 
-        TextView description = (TextView) v.findViewById(R.id.description_text);
+        TextView description = v.findViewById(R.id.description_text);
         description.setText(card.getDescription());
         description.setAlpha(0f);
 
-        GlazyImageView imgView = (GlazyImageView) v.findViewById(R.id.glazy_image_view);
+        SevenDoctorsImageView imgView = v.findViewById(R.id.glazy_image_view);
         imgView.setImageRes(card.getImageRes());
         imgView.setTitleText(card.getTitle());
         imgView.setTitleTextColor(card.getTitleColor());

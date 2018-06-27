@@ -5,7 +5,7 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 
 import com.abualzait.sevendoctorspager.SevenDoctorsCard;
-import com.abualzait.sevendoctorspager.fragments.GlazyCardFragment;
+import com.abualzait.sevendoctorspager.fragments.SevenDoctorsCardFragment;
 
 import java.util.ArrayList;
 
@@ -49,7 +49,7 @@ public class SevenDoctorsFragmentPagerAdapter extends AbstractFragmentPagerAdapt
     @Override
     public Fragment instantiateFragment(int position) {
         SevenDoctorsCard card = cards.get(position);
-        return GlazyCardFragment.newInstance( card );
+        return SevenDoctorsCardFragment.newInstance( card );
     }
 
     @Override
