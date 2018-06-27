@@ -90,7 +90,7 @@ public class PagerActivity extends AppCompatActivity {
                         .withImageRes(ic_shadi)
                         .withImageCutType(ImageCutType.LINE_POSITIVE)
                         .withImageCutHeightDP(40)
-        );
+         );
 
         mPager.setAdapter(mPagerAdapter);
         mPager.setPageMargin(Utils.dpToPx(getApplicationContext(), 25));

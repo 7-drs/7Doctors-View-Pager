@@ -25,7 +25,7 @@ public class SevenDoctorsPagerTransformer implements ViewPager.PageTransformer {
 
             float factor = 1.0f - Math.abs(position);
             ((SevenDoctorsImageView) page.findViewById(R.id.glazy_image_view)).update(factor);
-            (page.findViewById(R.id.description_text)).setAlpha(factor);
+            //(page.findViewById(R.id.description_text)).setAlpha(factor);
 
         }
     }

@@ -5,7 +5,6 @@ import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
 import android.view.*;
-import android.widget.TextView;
 
 import com.abualzait.sevendoctorspager.*;
 import com.abualzait.sevendoctorspager.views.SevenDoctorsImageView;
@@ -40,9 +39,9 @@ public class SevenDoctorsCardFragment extends Fragment {
         View v =  inflater.inflate(R.layout.layout_page, container, false);
         v.setBackgroundColor(card.getBackgroundColor());
 
-        TextView description = v.findViewById(R.id.description_text);
-        description.setText(card.getDescription());
-        description.setAlpha(0f);
+        //TextView description = v.findViewById(R.id.description_text);
+    //    description.setText(card.getDescription());
+     //   description.setAlpha(0f);
 
         SevenDoctorsImageView imgView = v.findViewById(R.id.glazy_image_view);
         imgView.setImageRes(card.getImageRes());

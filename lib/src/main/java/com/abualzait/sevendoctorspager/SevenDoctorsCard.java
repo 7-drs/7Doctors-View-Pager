@@ -5,6 +5,7 @@ import android.graphics.Color;
 import com.abualzait.sevendoctorspager.views.SevenDoctorsImageView;
 
 import java.io.Serializable;
+import java.util.List;
 
 public class SevenDoctorsCard implements Serializable{
 
@@ -32,6 +33,7 @@ public class SevenDoctorsCard implements Serializable{
     private int mImageCutHeightDP;
 
     private int mBackgroundColor;
+    private List<?> list;
 
     public SevenDoctorsCard() {
 
@@ -155,6 +157,11 @@ public class SevenDoctorsCard implements Serializable{
 
     public SevenDoctorsCard withBackgroundColor(int bgColor) {
         mBackgroundColor = bgColor;
+        return this;
+    }
+
+    public SevenDoctorsCard withList(List<?> list) {
+        this.list = list;
         return this;
     }
 

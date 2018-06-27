@@ -21,9 +21,8 @@
     <com.abualzait.sevendoctorspager.pager.SevenDoctorsViewPager
         android:id="@+id/pager"
         android:layout_below="@+id/title"
-        android:layout_above="@+id/copyright"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="200dp"
         android:paddingLeft="40dp"
         android:paddingRight="40dp">
     </com.abualzait.sevendoctorspager.pager.SevenDoctorsViewPager>
