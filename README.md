@@ -1,11 +1,8 @@
-# glazy-viewpager
+# 7 Doctors-viewpager
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Glazy%20ViewPager-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5856)
 
 ViewPager template with cool animation.
 
-### Preview
-
-![Video](https://github.com/kannan-anbu/glazy-viewpager/blob/master/app/src/main/res/drawable-nodpi/sample_gif.gif)
 
 
 ### Dependencies
@@ -46,7 +43,7 @@ You can even use the GlazyImageView alone.
 License
 --------
 
-    Copyright 2017 Kannan-anbu.
+    Copyright 2018 7 Doctors.
 
     Licensed under the Apache License, Version 2.0 (the "License");
     you may not use this file except in compliance with the License.
