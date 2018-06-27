@@ -3,7 +3,7 @@ package com.abualzait.sevendoctorspager.transformers;
 import android.support.v4.view.ViewPager;
 import android.view.View;
 
-import com.kannan.glazy.R;
+import com.abualzait.sevendoctorspager.R;
 import com.abualzait.sevendoctorspager.pager.SevenDoctorsViewPager;
 import com.abualzait.sevendoctorspager.views.SevenDoctorsImageView;
 

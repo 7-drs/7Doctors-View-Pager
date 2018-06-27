@@ -1,28 +1,15 @@
 package com.abualzait.sevendoctorspager.views;
 
 import android.content.Context;
-import android.content.res.Resources;
-import android.content.res.TypedArray;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Color;
-import android.graphics.Matrix;
-import android.graphics.Paint;
-import android.graphics.Path;
-import android.graphics.RectF;
-import android.graphics.Shader;
-import android.graphics.Typeface;
+import android.content.res.*;
+import android.graphics.*;
 import android.media.ThumbnailUtils;
 import android.support.v7.graphics.Palette;
-import android.text.TextPaint;
-import android.text.TextUtils;
-import android.util.AttributeSet;
-import android.util.Log;
+import android.text.*;
+import android.util.*;
 import android.view.View;
 
-import com.kannan.glazy.R;
-import com.abualzait.sevendoctorspager.Utils;
+import com.abualzait.sevendoctorspager.*;
 
 import java.util.ArrayList;
 
@@ -153,86 +140,87 @@ public class SevenDoctorsImageView extends View {
         mOpenFactor = 0f;
 
         if(attrs != null){
-            TypedArray array = context.obtainStyledAttributes(attrs, R.styleable.GlazyImageView);
+            TypedArray array = context.obtainStyledAttributes(attrs, R.styleable
+                    .SevenDoctorsImageView);
             try {
-                if (array.hasValue(R.styleable.GlazyImageView_src))
+                if (array.hasValue(R.styleable.SevenDoctorsImageView_src))
                     mImageRes = array.getResourceId(
-                            R.styleable.GlazyImageView_src,
+                            R.styleable.SevenDoctorsImageView_src,
                             DEF_IMAGE_RES
                     );
-                if (array.hasValue(R.styleable.GlazyImageView_cutType))
+                if (array.hasValue(R.styleable.SevenDoctorsImageView_cutType))
                     mCutType = ImageCutType.fromId(
                             array.getInteger(
-                                    R.styleable.GlazyImageView_cutType,
+                                    R.styleable.SevenDoctorsImageView_cutType,
                                     DEF_IMAGE_CUT_TYPE.mType
                             )
                     );
-                if (array.hasValue(R.styleable.GlazyImageView_cutHeight))
+                if (array.hasValue(R.styleable.SevenDoctorsImageView_cutHeight))
                     mCutHeight = array.getDimensionPixelSize(
-                            R.styleable.GlazyImageView_cutHeight,
+                            R.styleable.SevenDoctorsImageView_cutHeight,
                             mCutHeight
                     );
-                if (array.hasValue(R.styleable.GlazyImageView_cutCount))
+                if (array.hasValue(R.styleable.SevenDoctorsImageView_cutCount))
                     mCutCount = array.getInteger(
-                            R.styleable.GlazyImageView_cutCount,
+                            R.styleable.SevenDoctorsImageView_cutCount,
                             DEF_CUT_COUNT
                     );
-                if (array.hasValue(R.styleable.GlazyImageView_autoTint))
+                if (array.hasValue(R.styleable.SevenDoctorsImageView_autoTint))
                     mAutoTint = array.getBoolean(
-                            R.styleable.GlazyImageView_autoTint,
+                            R.styleable.SevenDoctorsImageView_autoTint,
                             false
                     );
-                if (array.hasValue(R.styleable.GlazyImageView_tintColor))
+                if (array.hasValue(R.styleable.SevenDoctorsImageView_tintColor))
                     mTintColor= array.getColor(
-                            R.styleable.GlazyImageView_tintColor,
+                            R.styleable.SevenDoctorsImageView_tintColor,
                             DEF_TINT_COLOR
                     );
-                if (array.hasValue(R.styleable.GlazyImageView_tintAlpha))
+                if (array.hasValue(R.styleable.SevenDoctorsImageView_tintAlpha))
                     mTintAlpha = array.getInteger(
-                            R.styleable.GlazyImageView_tintAlpha,
+                            R.styleable.SevenDoctorsImageView_tintAlpha,
                             DEF_TINT_ALPHA
                     );
-                if (array.hasValue(R.styleable.GlazyImageView_titleText))
+                if (array.hasValue(R.styleable.SevenDoctorsImageView_titleText))
                     mTitleText = array.getText(
-                            R.styleable.GlazyImageView_titleText
+                            R.styleable.SevenDoctorsImageView_titleText
                     ).toString();
-                if (array.hasValue(R.styleable.GlazyImageView_titleTextColor))
+                if (array.hasValue(R.styleable.SevenDoctorsImageView_titleTextColor))
                     mTitleTextColor = array.getColor(
-                            R.styleable.GlazyImageView_titleTextColor,
+                            R.styleable.SevenDoctorsImageView_titleTextColor,
                             DEF_TITLE_TEXT_COLOR
                     );
-                if (array.hasValue(R.styleable.GlazyImageView_titleTextSize))
+                if (array.hasValue(R.styleable.SevenDoctorsImageView_titleTextSize))
                     mTitleTextSize= array.getDimensionPixelSize(
-                            R.styleable.GlazyImageView_titleTextSize,
+                            R.styleable.SevenDoctorsImageView_titleTextSize,
                             mTitleTextSize
                     );
-                if (array.hasValue(R.styleable.GlazyImageView_subTitleText))
+                if (array.hasValue(R.styleable.SevenDoctorsImageView_subTitleText))
                     mSubTitleText = array.getText(
-                            R.styleable.GlazyImageView_subTitleText
+                            R.styleable.SevenDoctorsImageView_subTitleText
                     ).toString();
-                if (array.hasValue(R.styleable.GlazyImageView_subTitleTextColor))
+                if (array.hasValue(R.styleable.SevenDoctorsImageView_subTitleTextColor))
                     mSubTitleTextColor = array.getColor(
-                            R.styleable.GlazyImageView_subTitleTextColor,
+                            R.styleable.SevenDoctorsImageView_subTitleTextColor,
                             DEF_SUB_TITLE_TEXT_COLOR
                     );
-                if (array.hasValue(R.styleable.GlazyImageView_subTitleTextSize))
+                if (array.hasValue(R.styleable.SevenDoctorsImageView_subTitleTextSize))
                     mSubTitleTextSize= array.getDimensionPixelSize(
-                            R.styleable.GlazyImageView_subTitleTextSize,
+                            R.styleable.SevenDoctorsImageView_subTitleTextSize,
                             mSubTitleTextSize
                     );
-                if (array.hasValue(R.styleable.GlazyImageView_textMargin))
+                if (array.hasValue(R.styleable.SevenDoctorsImageView_textMargin))
                     mTextMargin = array.getDimensionPixelSize(
-                            R.styleable.GlazyImageView_textMargin,
+                            R.styleable.SevenDoctorsImageView_textMargin,
                             mTextMargin
                     );
-                if (array.hasValue(R.styleable.GlazyImageView_lineSpacing))
+                if (array.hasValue(R.styleable.SevenDoctorsImageView_lineSpacing))
                     mLineSpacing = array.getDimensionPixelSize(
-                            R.styleable.GlazyImageView_lineSpacing,
+                            R.styleable.SevenDoctorsImageView_lineSpacing,
                             mLineSpacing
                     );
-                if (array.hasValue(R.styleable.GlazyImageView_openFactor))
+                if (array.hasValue(R.styleable.SevenDoctorsImageView_openFactor))
                     mOpenFactor = array.getFloat(
-                            R.styleable.GlazyImageView_openFactor,
+                            R.styleable.SevenDoctorsImageView_openFactor,
                             DEF_OPEN_FACTOR
                     );
             } finally {
