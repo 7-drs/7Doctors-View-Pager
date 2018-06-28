@@ -1,10 +1,9 @@
 # 7 Doctors-viewpager
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Glazy%20ViewPager-brightgreen.svg?style=flat)](https://android-arsenal.com/details/1/5856)
 
 ViewPager template with cool animation.
 
 #Demo
-![Alt Text](https://github.com/7-drs/7Doctors-View-Pager/blob/master/app/src/main/res/drawable-nodpi/demo.gif)
+![7 Doctors View Pager for android](https://github.com/7-drs/7Doctors-View-Pager/blob/master/app/src/main/res/drawable-nodpi/demo.gif)
 
 
 
@@ -14,8 +13,6 @@ ViewPager template with cool animation.
 compile 'com.android.support:palette-v7:25.2.0'
 ```
 
-### Usage
-    Refer the implementation in the sample app.
 To get a Git project into your build:
 
 Step 1. Add the JitPack repository to your build file
@@ -42,8 +39,11 @@ Step 2. Add the dependency
 	        implementation 'com.github.7-drs:7Doctors-View-Pager:v1.2'
 	}
 ```
+### Usage
+    Refer the implementation in the sample app.
 
-License
+
+###License
 --------
 
     Copyright 2018 7 Doctors.
