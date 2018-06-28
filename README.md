@@ -3,6 +3,7 @@
 ViewPager template with cool animation.
 
 #Demo
+
 ![7 Doctors View Pager for android](https://github.com/7-drs/7Doctors-View-Pager/blob/master/app/src/main/res/drawable-nodpi/demo.gif)
 
 
@@ -40,9 +41,84 @@ Step 2. Add the dependency
 	}
 ```
 ### Usage
-    Refer the implementation in the sample app.
+Using the View Pager is very easy as the following example :
 
+```java
+        SevenDoctorsViewPager mPager = findViewById(R.id.pager);
+        SevenDoctorsFragmentPagerAdapter mPagerAdapter = new SevenDoctorsFragmentPagerAdapter
+                (getSupportFragmentManager(), getApplicationContext());
 
+                 Resources resources = getApplicationContext().getResources();
+                        int ic_motasem = resources.getIdentifier("motasim", "drawable", getPackageName());
+                        int ic_dana = resources.getIdentifier("dana", "drawable", getPackageName());
+                        int ic_nagham = resources.getIdentifier("nagham", "drawable", getPackageName());
+                        int ic_shadi = resources.getIdentifier("shadi", "drawable", getPackageName());
+                        int ic_zaid = resources.getIdentifier("zaid", "drawable", getPackageName());
+
+                        String desc_motasim = "الدكتور معتصم مسالمة ، طبيب مقيم طب وجراحة العيون في الخدمات " +
+                                "الطبية الملكية الأردنية ، اشتهر من خلال برنامجه الطبي التوعوي الأطباء السبعة " +
+                                "الذي يبث على قناة رؤيا الفضائية الأردنية كأول ظهور إعلامي طبي له ، محب للعمل " +
+                                "التطوعي وكان له بصمات واضحة لنشر فكرة العمل التطوعي في الأردن وفلسطين\n" +
+                                "\n";
+
+                        String desc_dana = "الصيدلانية دانا الجعبري\n";
+
+                        String desc_nagham = "الدكتورة نغم القرة غولي\n";
+
+                        String desc_shadi = "الدكتور شادي الشيخ\n";
+
+                        String desc_zaid = "";
+
+                        mPagerAdapter.addCardItem(
+                                new SevenDoctorsCard()
+                                        .withTitle("Motasim Masalmeh")
+                                        .withSubTitle("Doctor Title")
+                                        .withDescription(desc_motasim)
+                                        .withImageRes(ic_motasem)
+                                        .withImageCutType(ImageCutType.WAVE)
+                                        .withImageCutHeightDP(40)
+                        );
+                        mPagerAdapter.addCardItem(
+                                new SevenDoctorsCard()
+                                        .withTitle("Dr.Dana")
+                                        .withSubTitle("Doctor Description")
+                                        .withDescription(desc_dana)
+                                        .withImageRes(ic_dana)
+                                        .withImageCutType(ImageCutType.LINE_POSITIVE)
+                                        .withImageCutHeightDP(40)
+                        );
+                        mPagerAdapter.addCardItem(
+                                new SevenDoctorsCard()
+                                        .withTitle("Dr.Zaid Abu ghosh")
+                                        .withSubTitle("Robotic Surgeon")
+                                        .withDescription(desc_zaid)
+                                        .withImageRes(ic_zaid)
+                                        .withImageCutType(ImageCutType.LINE_POSITIVE)
+                                        .withImageCutHeightDP(40)
+                        );
+                        mPagerAdapter.addCardItem(
+                                new SevenDoctorsCard()
+                                        .withTitle("Dr.Nagham")
+                                        .withSubTitle("Doctor Description")
+                                        .withDescription(desc_nagham)
+                                        .withImageRes(ic_nagham)
+                                        .withImageCutType(ImageCutType.ARC)
+                                        .withImageCutHeightDP(40)
+                        );
+                        mPagerAdapter.addCardItem(
+                                new SevenDoctorsCard()
+                                        .withTitle("Shadi Alshaikh")
+                                        .withSubTitle("Doctor Description")
+                                        .withDescription(desc_shadi)
+                                        .withImageRes(ic_shadi)
+                                        .withImageCutType(ImageCutType.LINE_POSITIVE)
+                                        .withImageCutHeightDP(40)
+                         );
+
+                        mPager.setAdapter(mPagerAdapter);
+                        mPager.setPageMargin(Utils.dpToPx(getApplicationContext(), 25));
+                        mPager.setPageTransformer(false, new SevenDoctorsPagerTransformer());
+```
 ###License
 --------
 
