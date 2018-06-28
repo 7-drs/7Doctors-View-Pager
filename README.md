@@ -3,6 +3,10 @@
 
 ViewPager template with cool animation.
 
+#Demo
+![Alt Text](https://github.com/7-drs/7Doctors-View-Pager/blob/master/app/src/main/res/drawable-nodpi/demo.gif)
+
+
 
 
 ### Dependencies
