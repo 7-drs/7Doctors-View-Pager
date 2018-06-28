@@ -119,6 +119,7 @@ Using the View Pager is very easy as the following example :
                         mPager.setPageMargin(Utils.dpToPx(getApplicationContext(), 25));
                         mPager.setPageTransformer(false, new SevenDoctorsPagerTransformer());
 ```
+
 ###License
 --------
 
